@@ -1,0 +1,588 @@
+{
+    "swagger": "2.0",
+    "info": {
+        "version": "1.0",
+        "title": "lya-tenants"
+    },
+    "schemes": [
+        "https"
+    ],
+    "paths": {
+        "/validate": {
+            "get": {
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "200 response",
+                        "schema": {
+                            "$ref": "#/definitions/Empty"
+                        }
+                    }
+                },
+                "x-amazon-apigateway-integration": {
+                    "responses": {
+                        "default": {
+                            "statusCode": "200"
+                        }
+                    },
+                    "uri": "arn:{partition}:apigateway:{region_name}:lambda:path/2015-03-31/functions/{api_handler_lambda_arn}/invocations",
+                    "passthroughBehavior": "when_no_match",
+                    "httpMethod": "POST",
+                    "contentHandling": "CONVERT_TO_TEXT",
+                    "type": "aws_proxy"
+                },
+                "security": [
+                    {
+                        "api_key_authorizer": []
+                    }
+                ]
+            }
+        },
+        "/v1/tenants": {
+            "get": {
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "200 response",
+                        "schema": {
+                            "$ref": "#/definitions/Empty"
+                        }
+                    }
+                },
+                "x-amazon-apigateway-integration": {
+                    "responses": {
+                        "default": {
+                            "statusCode": "200"
+                        }
+                    },
+                    "uri": "arn:{partition}:apigateway:{region_name}:lambda:path/2015-03-31/functions/{api_handler_lambda_arn}/invocations",
+                    "passthroughBehavior": "when_no_match",
+                    "httpMethod": "POST",
+                    "contentHandling": "CONVERT_TO_TEXT",
+                    "type": "aws_proxy"
+                },
+                "security": [
+                    {
+                        "authorization_key": []
+                    }
+                ]
+            },
+            "post": {
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "200 response",
+                        "schema": {
+                            "$ref": "#/definitions/Empty"
+                        }
+                    }
+                },
+                "x-amazon-apigateway-integration": {
+                    "responses": {
+                        "default": {
+                            "statusCode": "200"
+                        }
+                    },
+                    "uri": "arn:{partition}:apigateway:{region_name}:lambda:path/2015-03-31/functions/{api_handler_lambda_arn}/invocations",
+                    "passthroughBehavior": "when_no_match",
+                    "httpMethod": "POST",
+                    "contentHandling": "CONVERT_TO_TEXT",
+                    "type": "aws_proxy"
+                },
+                "security": [
+                    {
+                        "authorization_key": []
+                    }
+                ]
+            }
+        },
+        "/v1/tenants/{tenant_slug}": {
+            "get": {
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "200 response",
+                        "schema": {
+                            "$ref": "#/definitions/Empty"
+                        }
+                    }
+                },
+                "x-amazon-apigateway-integration": {
+                    "responses": {
+                        "default": {
+                            "statusCode": "200"
+                        }
+                    },
+                    "uri": "arn:{partition}:apigateway:{region_name}:lambda:path/2015-03-31/functions/{api_handler_lambda_arn}/invocations",
+                    "passthroughBehavior": "when_no_match",
+                    "httpMethod": "POST",
+                    "contentHandling": "CONVERT_TO_TEXT",
+                    "type": "aws_proxy"
+                },
+                "security": [
+                    {
+                        "authorization_key": []
+                    }
+                ],
+                "parameters": [
+                    {
+                        "name": "tenant_slug",
+                        "in": "path",
+                        "required": true,
+                        "type": "string"
+                    }
+                ]
+            },
+            "patch": {
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "200 response",
+                        "schema": {
+                            "$ref": "#/definitions/Empty"
+                        }
+                    }
+                },
+                "x-amazon-apigateway-integration": {
+                    "responses": {
+                        "default": {
+                            "statusCode": "200"
+                        }
+                    },
+                    "uri": "arn:{partition}:apigateway:{region_name}:lambda:path/2015-03-31/functions/{api_handler_lambda_arn}/invocations",
+                    "passthroughBehavior": "when_no_match",
+                    "httpMethod": "POST",
+                    "contentHandling": "CONVERT_TO_TEXT",
+                    "type": "aws_proxy"
+                },
+                "security": [
+                    {
+                        "authorization_key": []
+                    }
+                ],
+                "parameters": [
+                    {
+                        "name": "tenant_slug",
+                        "in": "path",
+                        "required": true,
+                        "type": "string"
+                    }
+                ]
+            }
+        },
+        "/v1/tenants/{tenant_slug}/api-keys": {
+            "get": {
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "200 response",
+                        "schema": {
+                            "$ref": "#/definitions/Empty"
+                        }
+                    }
+                },
+                "x-amazon-apigateway-integration": {
+                    "responses": {
+                        "default": {
+                            "statusCode": "200"
+                        }
+                    },
+                    "uri": "arn:{partition}:apigateway:{region_name}:lambda:path/2015-03-31/functions/{api_handler_lambda_arn}/invocations",
+                    "passthroughBehavior": "when_no_match",
+                    "httpMethod": "POST",
+                    "contentHandling": "CONVERT_TO_TEXT",
+                    "type": "aws_proxy"
+                },
+                "security": [
+                    {
+                        "authorization_key": []
+                    }
+                ],
+                "parameters": [
+                    {
+                        "name": "tenant_slug",
+                        "in": "path",
+                        "required": true,
+                        "type": "string"
+                    }
+                ]
+            },
+            "post": {
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "200 response",
+                        "schema": {
+                            "$ref": "#/definitions/Empty"
+                        }
+                    }
+                },
+                "x-amazon-apigateway-integration": {
+                    "responses": {
+                        "default": {
+                            "statusCode": "200"
+                        }
+                    },
+                    "uri": "arn:{partition}:apigateway:{region_name}:lambda:path/2015-03-31/functions/{api_handler_lambda_arn}/invocations",
+                    "passthroughBehavior": "when_no_match",
+                    "httpMethod": "POST",
+                    "contentHandling": "CONVERT_TO_TEXT",
+                    "type": "aws_proxy"
+                },
+                "security": [
+                    {
+                        "authorization_key": []
+                    }
+                ],
+                "parameters": [
+                    {
+                        "name": "tenant_slug",
+                        "in": "path",
+                        "required": true,
+                        "type": "string"
+                    }
+                ]
+            }
+        },
+        "/v1/tenants/{tenant_slug}/api-keys/{uuid}": {
+            "get": {
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "200 response",
+                        "schema": {
+                            "$ref": "#/definitions/Empty"
+                        }
+                    }
+                },
+                "x-amazon-apigateway-integration": {
+                    "responses": {
+                        "default": {
+                            "statusCode": "200"
+                        }
+                    },
+                    "uri": "arn:{partition}:apigateway:{region_name}:lambda:path/2015-03-31/functions/{api_handler_lambda_arn}/invocations",
+                    "passthroughBehavior": "when_no_match",
+                    "httpMethod": "POST",
+                    "contentHandling": "CONVERT_TO_TEXT",
+                    "type": "aws_proxy"
+                },
+                "security": [
+                    {
+                        "authorization_key": []
+                    }
+                ],
+                "parameters": [
+                    {
+                        "name": "tenant_slug",
+                        "in": "path",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "name": "uuid",
+                        "in": "path",
+                        "required": true,
+                        "type": "string"
+                    }
+                ]
+            },
+            "delete": {
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "200 response",
+                        "schema": {
+                            "$ref": "#/definitions/Empty"
+                        }
+                    }
+                },
+                "x-amazon-apigateway-integration": {
+                    "responses": {
+                        "default": {
+                            "statusCode": "200"
+                        }
+                    },
+                    "uri": "arn:{partition}:apigateway:{region_name}:lambda:path/2015-03-31/functions/{api_handler_lambda_arn}/invocations",
+                    "passthroughBehavior": "when_no_match",
+                    "httpMethod": "POST",
+                    "contentHandling": "CONVERT_TO_TEXT",
+                    "type": "aws_proxy"
+                },
+                "security": [
+                    {
+                        "authorization_key": []
+                    }
+                ],
+                "parameters": [
+                    {
+                        "name": "tenant_slug",
+                        "in": "path",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "name": "uuid",
+                        "in": "path",
+                        "required": true,
+                        "type": "string"
+                    }
+                ]
+            }
+        },
+        "/v1/tenants/{tenant_slug}/sonarly-api-principals": {
+            "get": {
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "200 response",
+                        "schema": {
+                            "$ref": "#/definitions/Empty"
+                        }
+                    }
+                },
+                "x-amazon-apigateway-integration": {
+                    "responses": {
+                        "default": {
+                            "statusCode": "200"
+                        }
+                    },
+                    "uri": "arn:{partition}:apigateway:{region_name}:lambda:path/2015-03-31/functions/{api_handler_lambda_arn}/invocations",
+                    "passthroughBehavior": "when_no_match",
+                    "httpMethod": "POST",
+                    "contentHandling": "CONVERT_TO_TEXT",
+                    "type": "aws_proxy"
+                },
+                "security": [
+                    {
+                        "authorization_key": []
+                    }
+                ],
+                "parameters": [
+                    {
+                        "name": "tenant_slug",
+                        "in": "path",
+                        "required": true,
+                        "type": "string"
+                    }
+                ]
+            },
+            "post": {
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "200 response",
+                        "schema": {
+                            "$ref": "#/definitions/Empty"
+                        }
+                    }
+                },
+                "x-amazon-apigateway-integration": {
+                    "responses": {
+                        "default": {
+                            "statusCode": "200"
+                        }
+                    },
+                    "uri": "arn:{partition}:apigateway:{region_name}:lambda:path/2015-03-31/functions/{api_handler_lambda_arn}/invocations",
+                    "passthroughBehavior": "when_no_match",
+                    "httpMethod": "POST",
+                    "contentHandling": "CONVERT_TO_TEXT",
+                    "type": "aws_proxy"
+                },
+                "security": [
+                    {
+                        "authorization_key": []
+                    }
+                ],
+                "parameters": [
+                    {
+                        "name": "tenant_slug",
+                        "in": "path",
+                        "required": true,
+                        "type": "string"
+                    }
+                ]
+            }
+        },
+        "/v1/tenants/{tenant_slug}/sonarly-api-principals/{uuid}": {
+            "delete": {
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "200 response",
+                        "schema": {
+                            "$ref": "#/definitions/Empty"
+                        }
+                    }
+                },
+                "x-amazon-apigateway-integration": {
+                    "responses": {
+                        "default": {
+                            "statusCode": "200"
+                        }
+                    },
+                    "uri": "arn:{partition}:apigateway:{region_name}:lambda:path/2015-03-31/functions/{api_handler_lambda_arn}/invocations",
+                    "passthroughBehavior": "when_no_match",
+                    "httpMethod": "POST",
+                    "contentHandling": "CONVERT_TO_TEXT",
+                    "type": "aws_proxy"
+                },
+                "security": [
+                    {
+                        "authorization_key": []
+                    }
+                ],
+                "parameters": [
+                    {
+                        "name": "tenant_slug",
+                        "in": "path",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "name": "uuid",
+                        "in": "path",
+                        "required": true,
+                        "type": "string"
+                    }
+                ]
+            }
+        },
+        "/": {
+            "get": {
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "200 response",
+                        "schema": {
+                            "$ref": "#/definitions/Empty"
+                        }
+                    }
+                },
+                "x-amazon-apigateway-integration": {
+                    "responses": {
+                        "default": {
+                            "statusCode": "200"
+                        }
+                    },
+                    "uri": "arn:{partition}:apigateway:{region_name}:lambda:path/2015-03-31/functions/{api_handler_lambda_arn}/invocations",
+                    "passthroughBehavior": "when_no_match",
+                    "httpMethod": "POST",
+                    "contentHandling": "CONVERT_TO_TEXT",
+                    "type": "aws_proxy"
+                }
+            }
+        }
+    },
+    "definitions": {
+        "Empty": {
+            "type": "object",
+            "title": "Empty Schema"
+        }
+    },
+    "x-amazon-apigateway-binary-media-types": [
+        "application/octet-stream",
+        "application/x-tar",
+        "application/zip",
+        "audio/basic",
+        "audio/ogg",
+        "audio/mp4",
+        "audio/mpeg",
+        "audio/wav",
+        "audio/webm",
+        "image/png",
+        "image/jpg",
+        "image/jpeg",
+        "image/gif",
+        "video/ogg",
+        "video/mpeg",
+        "video/webm"
+    ],
+    "securityDefinitions": {
+        "api_key_authorizer": {
+            "in": "header",
+            "type": "apiKey",
+            "name": "Authorization",
+            "x-amazon-apigateway-authtype": "custom",
+            "x-amazon-apigateway-authorizer": {
+                "type": "token",
+                "authorizerUri": "arn:{partition}:apigateway:{region_name}:lambda:path/2015-03-31/functions/{api_key_authorizer_lambda_arn}/invocations"
+            }
+        },
+        "authorization_key": {
+            "in": "header",
+            "type": "apiKey",
+            "name": "Authorization",
+            "x-amazon-apigateway-authtype": "custom",
+            "x-amazon-apigateway-authorizer": {
+                "type": "token",
+                "authorizerUri": "arn:{partition}:apigateway:{region_name}:lambda:path/2015-03-31/functions/{authorization_key_lambda_arn}/invocations"
+            }
+        }
+    }
+}
